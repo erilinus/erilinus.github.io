@@ -1,0 +1,135 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    background-color: #1A1A1A;
+    color: #c2c2c2;
+}
+
+main {
+    padding: 64px 16px 64px 16px;
+}
+
+.shadow {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: 10%;
+    background: rgb(26,26,26);
+    background: linear-gradient(180deg, rgba(26,26,26,1) 0%, rgba(26,26,26,0) 100%);
+}
+
+section {
+    margin: 0 0 72px 0;
+}
+
+#contact {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+h1 {
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    line-height: 0%;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    margin: 0 0 32px 0;
+}
+
+h3 {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    margin: 4px 0;
+    font-weight: 400;
+}
+
+h3 a {
+    font-weight: 400;
+    text-underline-offset: 3px;
+    text-decoration-thickness:0.8px;
+    color: #c2c2c2;
+}
+
+p {
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    line-height: 30px;
+    font-weight: 400;
+    margin: 0 0 28px 0;
+}
+
+a {
+    font-weight: 400;
+    text-underline-offset: 3px;
+    text-decoration-thickness:0.8px;
+    color: #c2c2c2;
+    text-decoration-color: #787878;
+    transition: 0.2s;
+}
+
+a:hover {
+    text-decoration-thickness:1.1px;
+    text-decoration-color: #c2c2c2;  
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding-left: 0;
+}
+
+.project-item {
+    list-style-type: none;
+    max-width: 298px;
+}
+
+.project-item p {
+    margin: 0;
+    color: #969696;
+}
+
+.animation {
+    opacity: 0;
+    top: 10px;
+    position: relative;
+    
+    &.i01 {
+      animation: fade-in-item 1s .1s ease-out forwards;
+    }
+    &.i02 {
+      animation: fade-in-item 1s .4s ease-out forwards;
+    }
+    
+    &.i03 {
+      animation: fade-in-item 1s .7s ease-out forwards;
+    }
+    
+    &.i04 {
+      animation: fade-in-item 1s 1s ease-out forwards;
+    }
+  }
+  
+  @keyframes fade-in-item {
+    0%   { display: block; opacity: 0; top: 10px;}
+    30%  { display: block; opacity: .5; top: 0px;}
+    60%  { display: block; opacity: .8; top: 0px;}
+    100% { display: block; opacity: 1; top: 0px;} 
+  }
+
+@media screen and (min-width: 768px) {
+    main {
+        padding: 128px 0 128px 0;
+        width: 640px;
+    }
+
+  }
